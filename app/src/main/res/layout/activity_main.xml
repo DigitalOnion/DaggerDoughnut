@@ -4,15 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context="com.outerspace.daggerdoughnut.MainActivity">
 
     <TextView
+        android:id="@+id/intro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/intro"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/caption_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/intro"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/example_01"
+        />
+
+    <EditText
+        android:id="@+id/text_entry_01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/greenpea"
+        android:padding="4dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/caption_01"/>
+
+    <TextView
+        android:id="@+id/caption_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/text_entry_01"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/example_02"
+        />
+
+    <EditText
+        android:id="@+id/text_entry_02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/greenpea"
+        android:padding="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caption_02"/>
+
 
 </android.support.constraint.ConstraintLayout>
