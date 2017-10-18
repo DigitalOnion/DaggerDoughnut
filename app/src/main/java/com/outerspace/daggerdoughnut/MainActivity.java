@@ -9,15 +9,16 @@ import com.outerspace.daggerdoughnut.component.DoughnutComponent;
 import com.outerspace.daggerdoughnut.model.DoughnutDataPojo;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class MainActivity extends AppCompatActivity {
 
     private DoughnutComponent component;
 
-    @Inject
+    @Inject @Named("choco")
     DoughnutDataPojo chocoDoughnut;
 
-    @Inject
+    @Inject @Named("nuts")
     DoughnutDataPojo nutDoughnut;
 
     @Override
